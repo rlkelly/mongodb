@@ -68,13 +68,3 @@ package node['mongodb']['package_name'] do
   version node['mongodb']['package_version']
   not_if { node['mongodb']['install_method'] == 'none' }
 end
-
-# Create keyFile if specified
-# file node['mongodb']['config']['keyFile'] do
-#   owner node['mongodb']['user']
-#   group node['mongodb']['group']
-#   mode  '0600'
-#   backup false
-#   content node['mongodb']['key_file_content']
-#   only_if { node['mongodb']['key_file_content'] }
-# end
